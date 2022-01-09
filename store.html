@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GorakuList Admin Page</title>
+
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/store.css">
+</head>
+
+<body>
+  <iframe src="/header.html"></iframe>
+  <div class="container">
+    <h1>가게 정보</h1>
+
+    <!-- 가게 이름, 주소, 영업시간, 오픈여부, 전화, 트위터, 웹사이트, knsta 입력 -->
+    <form class="store-form" action="/admin/store" method="post">
+      <div class="store-row">
+        <label class="store-cell" for="store-name">가게 이름</label>
+        <input class="text-input store-cell" type="text" name="name" id="store-name" 
+          value="<?= $store->name ?>">
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-address">주소</label>
+        <input class="text-input store-cell" type="text" name="address" id="store-address"
+          value="<?= $store->address ?>">
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-open-time">영업시간</label>
+        <input class="text-input store-cell" type="text" name="open_time" id="store-open-time"
+          value="<?= $store->open_time ?>">
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-open-status">오픈여부</label>
+        <select class="text-input store-cell" name="open_status" id="store-open-status">
+          <option value="1">오픈</option>
+          <option value="0">마감</option>
+        </select>
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-phone">전화번호</label>
+        <input class="text-input store-cell" type="text" name="phone" id="store-phone" 
+          value="<?= $store->phone ?>">
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-twitter">트위터</label>
+        <input class="text-input store-cell" type="text" name="twitter" id="store-twitter"
+          value="<?= $store->twitter ?>">
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-website">웹사이트</label>
+        <input class="text-input store-cell" type="text" name="website" id="store-website"
+          value="<?= $store->website ?>">
+      </div>
+      <div class="store-row">
+        <label class="store-cell" for="store-knsta">KNSTA</label>
+        <input class="text-input store-cell" type="text" name="knsta" id="store-knsta" 
+          value="<?= $store->knsta ?>">
+      </div>
+      <input class="button" type="submit" value="저장">
+    </form>
+  </div>
+</body>
+
+</html>

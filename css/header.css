@@ -1,0 +1,24 @@
+nav {
+    flex-flow: row nowrap; 
+    justify-content: space-between;
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    background-color: #f8f9fa;
+}
+
+nav div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+nav div a {
+    text-decoration: none;
+    color: #7f7f7f;
+    padding: 0 0.25rem;
+}
